@@ -3,7 +3,7 @@ name: Shell commands
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-shell-commands:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -23,3 +23,11 @@ jobs:
           print('Operating system:', platform.system())
           print('System info:', platform.system())
         shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Windows
+        run: Get-location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
