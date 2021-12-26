@@ -1,20 +1,26 @@
 name: Actions Workflow
 
-on: 
+on:
   - push
 
-jobs: 
+jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files 
+      - name: List Files Before Checkout
         run: |
           pwd
           ls
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+       - name: List Files After Checkout
+        run: |
+          pwd
+          ls  
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: John
-      - name: Log Greeting Time  
+      - name: Log Greeting Time
         run: echo "${{steps.greet.outputs.time}}"
