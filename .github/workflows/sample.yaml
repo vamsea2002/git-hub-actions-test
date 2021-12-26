@@ -15,6 +15,11 @@ jobs:
       - name: python Command
         run: |
           import platform
-          print
-          (platform.processor())
+          print('Platform processor:', platform.processor())
+          print('Platform architecture:', platform.architecture())
+          print('Machine type:', platform.machine())
+          print('System's network name:', platform.node())
+          print('Platform information:', platform.platform())
+          print('Operating system:', platform.system())
+          print('System info:', platform.system())
         shell: python
