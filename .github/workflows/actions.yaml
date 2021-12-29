@@ -5,11 +5,7 @@ on:
 
 on:  
   - pull_request
-      types:
-        - closed
-        - assigned
-        - opened
-        - reopened
+      types: [assigned, opened, synchronize, reopened]
 
 jobs:
   run-github-actions:
