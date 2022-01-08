@@ -1,9 +1,14 @@
 name: Actions Workflow
 
 on:
-  #- push
-   pull_request:
-      types: [assigned, opened, synchronize, reopened]
+  # schedule:
+  #   - cron:
+  repository_dispatch:
+    types: [build] 
+    
+  push:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   run-github-actions:
