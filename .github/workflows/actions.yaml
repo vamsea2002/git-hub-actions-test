@@ -7,15 +7,15 @@ on:
     types: [build]
 
   push:
+    branches:
+      - main
   pull_request:
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
-    steps:
-      - name: payload
-        run: echo "${{github.event.cilent_payload.env}}"
+    steps:     
       - name: List Files Before Checkout
         run: |
           pwd
@@ -35,5 +35,7 @@ jobs:
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: John
+      - name: payload
+        run: echo "${{github.event.cilent_payload.env}}"    
       - name: Log Greeting Time
         run: echo "${{steps.greet.outputs.time}}"
