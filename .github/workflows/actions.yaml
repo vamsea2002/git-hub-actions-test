@@ -5,7 +5,8 @@ on:
   #   - cron:
   repository_dispatch:
     types: [build]
-
+  workflow_dispatch:
+  
   push:
     branches:
       - main    
