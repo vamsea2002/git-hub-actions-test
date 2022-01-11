@@ -8,7 +8,20 @@ on:
 
   push:
     branches:
-      - main
+      - main    
+     # - 'feature/*'
+     # - '!feature/testC'
+    # branches-ignore:
+    #   - ""  
+    # tags:
+    #   - ""
+    # tags-ignore:
+    #   - ""
+    # paths:
+    #   - 
+    # paths-ignore:
+    #   - ""     
+
   pull_request:
     types: [assigned, opened, synchronize, reopened]
 
