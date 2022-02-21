@@ -3,10 +3,9 @@ name: wf-one
 on: [push]
 
 jobs: 
-  create_issue:
-    runs-on: ubuntu-latest 
-    
-    steps:
-      - name: test
-        uses: vamsea2002/git-hub-actions-test/.github/workflows/wf-two.yml@main
+  call-wf-two:
+    uses: vamsea2002/git-hub-actions-test/.github/workflows/wf-two.yml@main
+   
+   
+        
         
