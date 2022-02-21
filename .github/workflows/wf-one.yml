@@ -8,5 +8,5 @@ jobs:
     
     steps:
       - name: Create issue using REST API
-        run: |
-        echo: "from wf-one"
+        run: |  
+          echo "from wf-one"
