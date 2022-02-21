@@ -1,0 +1,13 @@
+name: wf-two
+
+on:
+  workflow_call:
+
+jobs: 
+  create_issue:
+    runs-on: ubuntu-latest 
+    
+    steps:
+      - name: echo info
+        run: |  
+          echo "from wf-two"
