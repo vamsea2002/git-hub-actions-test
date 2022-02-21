@@ -7,9 +7,9 @@ on:
     types: [build]
   workflow_dispatch:
   
-  push:
-    branches:
-      - main    
+  #push:
+    #branches:
+      #- main    
      # - 'feature/*'
      # - '!feature/testC'
     # branches-ignore:
