@@ -15,4 +15,4 @@ jobs:
       - name: echo info
         run: |  
           echo "from wf-two"
-          echo ${{env.INPUT_USERNAME}}
+          echo ${{inputs.username}}
