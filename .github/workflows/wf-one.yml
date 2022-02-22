@@ -5,7 +5,8 @@ on: [push]
 jobs: 
   call-wf-two:
     uses: vamsea2002/git-hub-actions-test/.github/workflows/wf-two.yml@main
-   
+    with:
+      username: vamsi
    
         
         
