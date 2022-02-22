@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: vamsea2002/chello-world-composite-action@v1
+      - uses: vamsea2002/hello-world-composite-action@v1
       
         
